@@ -1,0 +1,688 @@
+* {
+    
+    box-sizing: border-box;
+    
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* header */
+body {
+    font-family: 'Roboto', serif;
+    background-color: rgb(6, 8, 20);
+}
+
+.logo {
+    position: absolute;
+    margin: 20px 0 0 20px;
+    
+    
+    
+    
+    
+    
+}
+
+.logo img {
+   
+        
+      width: 150px;
+    
+}
+
+.burger {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 10001;
+  }
+
+ 
+  
+.burger span {
+    display: block;
+    background: rgb(207, 64, 64);
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: all  1.4s;
+  }
+
+.burger .s1Rotate {
+    transform: translateY(10px) rotate(45deg);
+    
+    
+}
+
+.burger .s2Vanish {
+    opacity: 0;
+}
+
+.burger .s3Rotate {
+    transform: translateY(-10px) rotate(-45deg);
+    
+    
+}
+
+
+
+ 
+
+nav {
+    position: fixed;
+    
+    margin: auto;
+    
+    width: 100%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: transform  1.4s;
+    z-index: 1000;
+    transform: translateX(0);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navResp {
+    
+    
+    transform: translatex(-100%) ;
+    
+}
+
+
+
+nav li {
+    list-style: none;
+    cursor: pointer;
+
+}
+
+
+
+nav a {
+      padding: 10px;
+      
+    
+      
+      text-decoration: none;
+      color: white;
+  }
+
+
+  header {
+    position: relative;
+    height: 100vh;
+    
+    background-image:url("../img/headerImg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1;
+}
+
+
+.latest-news {
+    border: 3px solid white;
+    margin-left: 25px;
+    width: calc(100% - 50px);
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    color: #eaeaea;
+    border-radius: 3px;
+    
+}
+
+
+
+.latest-news h2{
+    margin: 10px 0;
+font-weight: bold;
+font-size: 30px;
+text-overflow: ellipsis;
+  overflow: hidden; 
+}
+.latest-news p{
+text-align: left;
+padding-left: 20px;
+height: 130px;
+
+text-overflow: ellipsis;
+  overflow: hidden; 
+}
+.latestest-news a {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    width: 140px;
+   font-size: 11px;
+    border: 2px white solid;
+    padding: 7px ;
+    border-radius: 4px;  
+    bottom: 30px;
+    transform: translateX(-70px);
+    transition: all .4s;
+}
+
+
+
+.latestest-news a:hover {
+
+color: rgb(207, 64, 64);
+  
+    border: 2px solid rgb(207, 64, 64);
+
+}
+.date{
+    
+    right: 30px;
+float: right;
+font-size: 10px;
+
+bottom: 0px;
+margin-right: 5px;
+}
+
+.linha-div {
+    position: absolute;
+    bottom: 65px;
+    right: 40%;
+    border-radius: 5px;
+    background-color: white;
+    height: 2px;
+    width: 20%;
+    transform: scalex(4);
+    transition: all 2s;
+    
+
+}
+
+h1 {display: none;}
+
+.socials {
+    position: absolute;
+    margin: auto;
+    bottom: 30px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    right: 20%;
+
+}
+
+.socials li {
+    list-style: none;
+    cursor: pointer;
+    
+}
+
+.socials i {
+    color: white;
+    transition: all 0.4s;
+}
+
+.socials i:hover {
+    color: rgb(207, 64, 64);
+}
+
+h2  {
+    font-size: 50px;
+    color: white;
+}
+
+
+/* music */
+/* music player */
+
+#controls {
+    position: relative;
+    background-color: rgb(6, 8, 20);
+    height: 70px;
+}
+
+#controls .playerIcon {
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    color: white;
+    transition: all ease .4s;
+   
+}
+
+#controls .playerIcon:hover {
+    color: rgb(207, 64, 64);
+    transform: scale(1.1);
+}
+
+#currentSongPlaying {
+    position: absolute;
+    left: 75px;
+}
+input[type="range"] {
+    width: 60px;
+}
+.volumeInter {
+    position: absolute;
+    left: 75px;
+    top: 20px;
+    
+}
+.volumeInter i {
+    color: white;
+}
+
+.progressDiv {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+progress::-webkit-progress-bar {background-color: #fafafa; width: 100%;}
+progress::-webkit-progress-value {background-color: rgb(207, 64, 64) !important;}
+
+progress::-moz-progress-bar { background: white; }
+progress::-moz-progress-bar {background-color: rgb(207, 64, 64) !important;}
+progress {
+    width: 80%;
+    margin: 10px;
+    height: 6px;
+    background-color: #fafafa;
+    color: rgb(207, 64, 64);
+    opacity: 1;
+    transition: opacity ease 3;
+    
+    
+}
+
+
+
+
+
+
+
+progress:not([value]) {
+    opacity: 0;
+}
+    
+
+#currentSongPlaying {
+    color: white;
+}
+
+.music-div {
+    margin-top: 30px;
+    
+    width: 100%;
+    text-align: center;
+   
+
+}
+
+
+.music-div h2 {margin-bottom: 30px;}
+
+.play-list li a {
+ color: white;
+ text-decoration: none;
+ transition: color .3s;
+}
+
+.play-list li a:hover {
+color: rgb(207, 64, 64);
+}
+
+.play-list .current-song {
+    color: rgb(207, 64, 64);
+}
+
+.liMusic {
+    text-align: left;
+    
+    
+    padding: 10px 5px;
+    
+}
+
+.liMusic:hover {
+    background-color: rgba(123,123,123, 0.5);
+    
+}
+
+.liMusic .play-arrow {
+   
+transform: rotate(0deg);
+color: rgb(207, 64, 64);
+z-index: 2;
+}
+
+.fa-pause {
+    color: rgb(207, 64, 64);
+}
+
+.aMusic {
+    position: absolute;
+    left: 30px;
+}
+
+
+
+/* video */
+.video-div {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+  
+    
+}
+
+
+
+.iframe-container{
+    
+    position: relative;
+    width: 90%;
+    
+    padding-bottom: 56.25%; 
+    height: 0;
+    margin-top: 30px;
+    
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0px;
+    left: 5%;
+    
+    width: 100%;
+    height: 100%;
+    
+  }
+
+
+
+/* events */
+.events-div {
+ 
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.concertos-container {
+    margin-top:30px;
+    
+}
+
+.eventDesc, .eventInfo {
+display: flex;
+flex-direction: row;
+
+align-items: center;
+border: 1px grey solid;
+padding: 5px;
+
+
+}
+
+
+.fa-chevron-down {
+    transition: transform 0.4s;
+}
+.fa-chevron-down.active {
+    transform: rotate(180deg);
+    
+    
+}
+
+.concertos-container li {
+    padding: 20px 20px;
+    list-style: none;
+    color: white;
+
+    
+}
+
+
+
+.evento li:last-of-type {
+    margin-left: auto;
+}
+
+.arrow {
+    cursor: pointer;
+    
+}
+
+.eventInfo  {
+    height: 0;
+    transition: height ease-in .4s;
+    padding:0;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+
+
+
+.eventInfo.active {
+    height: 70px;
+}
+
+.eventLink {
+    margin-top: 30px    ;
+}
+
+.eventLink a {
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.eventLink a:hover {
+    
+    color: rgb(207, 64, 64);
+  
+    border: 2px solid rgb(207, 64, 64);
+    
+}
+
+
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .burger {
+        display: none;
+    }
+    .logo {
+        margin: 70px;
+    }
+    .logo img {
+        
+        width: 250px;
+    }
+
+    nav {
+        position: absolute;
+        margin-top: 0px;
+        z-index: 1;
+        font-weight: bold;
+        width: 100%;
+        height: 70px;
+        right: 0px;
+        border-radius: 3px;
+        
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgba(161, 161, 161, 0.74);
+        transform: translateX(0%);
+    }
+
+    nav a {
+        color: red;
+    }
+
+
+   
+    .latest-news {
+        border: 4px solid white;
+        margin-left: 25px;
+        width: calc(40% - 50px);
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        right: 50px;
+        color: #eaeaea;
+        
+    }
+
+
+        .latest-news p{
+            text-align:center; 
+            vertical-align: middle;
+        padding-left: 20px;
+        height: 130px;
+        
+        text-overflow: ellipsis;
+          overflow: hidden; 
+        }
+        .date{
+            
+            right: 30px;
+        float: right;
+        font-size: 10px;
+        
+        bottom: 0px;
+        margin-right: 5px;
+        }
+        
+        .socials {
+            position: absolute;
+            margin: auto;
+            bottom: 30px;
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            right: 35%;
+        
+        }
+    
+  } 
+
+  
+ 
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .burger {
+        display: none;
+    }
+    .logo {
+        margin: 50px;
+    }
+    .logo img {
+        
+        width: 250px;
+    }
+
+    nav {
+        position: absolute;
+        margin-top: 0px;
+        z-index: 1;
+        font-weight: bold;
+        width: unset;
+        float: right;
+        height: 70px;
+        right: 0px;
+        border-radius: 3px;
+        padding: 5px;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(161, 161, 161, 0.74);
+        transform: translateX(0%);
+    }
+
+    nav li {
+        padding:3px;
+        border-radius: 6px;
+        transition: background-color .2s;
+        overflow: visible;
+    }
+        nav li:hover {
+            background-color: rgba(216, 47, 47, 0.24);
+        }
+
+ 
+   
+    .latest-news {
+        border: 4px solid white;
+        margin-left: 25px;
+        width: calc(40% - 50px);
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        right: 50px;
+        color: #eaeaea;
+        
+    }
+
+
+        .latest-news p{
+            text-align:center; 
+            vertical-align: middle;
+        padding-left: 20px;
+        height: 130px;
+        
+        text-overflow: ellipsis;
+          overflow: hidden; 
+        }
+        .date{
+            
+            right: 30px;
+        float: right;
+        font-size: 10px;
+        
+        bottom: 0px;
+        margin-right: 5px;
+        }
+        
+        .socials {
+            position: absolute;
+            margin: auto;
+            bottom: 30px;
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            right: 35%;
+        
+        }
+   
+  } 
+
+  @media only screen and (min-width: 960px) {
+nav {
+    justify-content: space-around;
+}
+
+nav li {
+    padding: 20px;
+}
+  }

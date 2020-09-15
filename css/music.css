@@ -1,0 +1,443 @@
+* {
+    
+    box-sizing: border-box;
+    
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* header */
+body {
+    font-family: 'Roboto', serif;
+    background-color: rgb(6, 8, 20);
+}
+
+.logo {
+    position: absolute;
+    margin: 20px 0 0 20px;
+    
+    
+    
+    
+    
+    
+}
+
+.logo img {
+    background-color: rgba(161, 161, 161, 0.74);
+        
+      width: 150px;
+    
+}
+
+.burger {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 10001;
+  }
+
+ 
+  
+.burger span {
+    display: block;
+    background: rgb(207, 64, 64);
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: all  1.4s;
+  }
+
+.burger .s1Rotate {
+    transform: translateY(10px) rotate(45deg);
+    
+    
+}
+
+.burger .s2Vanish {
+    opacity: 0;
+}
+
+.burger .s3Rotate {
+    transform: translateY(-10px) rotate(-45deg);
+    
+    
+}
+
+
+
+ 
+
+nav {
+    position: fixed;
+    
+    margin: auto;
+    
+    width: 100%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: transform  1.4s;
+    z-index: 1000;
+    transform: translateX(0);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navResp {
+    
+    
+    transform: translatex(-100%) ;
+    
+}
+
+
+
+nav li {
+    list-style: none;
+    cursor: pointer;
+
+}
+
+
+
+nav a {
+      padding: 10px;
+      
+    
+      
+      text-decoration: none;
+      color: white;
+  }
+
+
+  header {
+    position: relative;
+    height: 100vh;
+    
+    background-color: rgb(6, 8, 20);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+
+
+.linha-div {
+    position: absolute;
+    top: 140px;
+    right: 40%;
+    border-radius: 5px;
+    background-color: white;
+    height: 2px;
+    width: 20%;
+    transform: scalex(4);
+    transition: all 2s;
+    
+
+}
+
+.socials {
+    position: absolute;
+    margin: auto;
+    top: 160px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    right: 20%;
+
+}
+
+.socials li {
+    list-style: none;
+    cursor: pointer;
+    
+}
+
+.socials i {
+    color: white;
+    transition: all 0.4s;
+}
+
+.socials i:hover {
+    color: rgb(207, 64, 64);
+}
+
+h2  {
+    font-size: 50px;
+    color: white;
+}
+
+
+/* music */
+/* music player */
+
+#controls {
+    position: relative;
+    background-color: rgb(6, 8, 20);
+    height: 70px;
+}
+
+#controls .playerIcon {
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    color: white;
+    transition: all ease .4s;
+   
+}
+
+#controls .playerIcon:hover {
+    color: rgb(207, 64, 64);
+    transform: scale(1.1);
+}
+
+#currentSongPlaying {
+    position: absolute;
+    left: 75px;
+}
+input[type="range"] {
+    width: 60px;
+}
+.volumeInter {
+    position: absolute;
+    left: 75px;
+    top: 20px;
+    
+}
+.volumeInter i {
+    color: white;
+}
+
+.progressDiv {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+progress::-webkit-progress-bar {background-color: #fafafa; width: 100%;}
+progress::-webkit-progress-value {background-color: rgb(207, 64, 64) !important;}
+
+progress::-moz-progress-bar { background: white; }
+progress::-moz-progress-bar {background-color: rgb(207, 64, 64) !important;}
+progress {
+    width: 80%;
+    margin: 10px;
+    height: 6px;
+    background-color: #fafafa;
+    color: rgb(207, 64, 64);
+    opacity: 1;
+    transition: opacity ease 3;
+    
+    
+}
+
+
+
+
+progress:not([value]) {
+    opacity: 0;
+}
+    
+
+#currentSongPlaying {
+    color: white;
+}
+
+.music-div {
+    margin-top: 30px;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+   
+
+}
+
+
+
+
+.play-list li a {
+ color: white;
+ text-decoration: none;
+ transition: color .3s;
+}
+
+.play-list li a:hover {
+color: rgb(207, 64, 64);
+}
+
+.play-list .current-song {
+    color: rgb(207, 64, 64);
+}
+
+.liMusic {
+    text-align: left;
+    
+    
+    padding: 10px 5px;
+    
+}
+
+.liMusic:hover {
+    background-color: rgba(123,123,123, 0.5);
+    
+}
+
+.liMusic .play-arrow {
+   
+transform: rotate(0deg);
+color: rgb(207, 64, 64);
+z-index: 2;
+}
+
+.fa-pause {
+    color: rgb(207, 64, 64);
+}
+
+.aMusic {
+    position: absolute;
+    left: 30px;
+}
+
+
+
+
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .burger {
+        display: none;
+    }
+    .logo {
+        margin: 70px;
+    }
+    .logo img {
+        
+        width: 250px;
+    }
+
+    nav {
+        position: absolute;
+        margin-top: 0px;
+        z-index: 1;
+        font-weight: bold;
+        width: 100%;
+        height: 70px;
+        right: 0px;
+        border-radius: 3px;
+        
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgba(161, 161, 161, 0.74);
+        transform: translateX(0%);
+    }
+
+    nav a {
+        color: red;
+    }
+
+.linha-div{
+    top: 250px;
+    
+}
+        
+        .socials {
+            position: absolute;
+            margin: auto;
+            top: 280px;
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            right: 35%;
+        
+        }
+    
+  } 
+
+  .music-div {
+      top: 30%;
+  }
+
+  
+ 
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .music-div {
+        top: 40%;
+    }
+    .burger {
+        display: none;
+    }
+    .logo {
+        margin: 50px;
+    }
+    .logo img {
+        
+        width: 250px;
+    }
+
+    nav {
+        position: absolute;
+        margin-top: 0px;
+        z-index: 1;
+        font-weight: bold;
+        width: unset;
+        float: right;
+        height: 70px;
+        right: 0px;
+        border-radius: 3px;
+        padding: 5px;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(161, 161, 161, 0.74);
+        transform: translateX(0%);
+    }
+
+    nav li {
+        padding:3px;
+        border-radius: 6px;
+        transition: background-color .2s;
+        overflow: visible;
+    }
+        nav li:hover {
+            background-color: rgba(216, 47, 47, 0.24);
+        }
+
+ 
+
+        .socials {
+            position: absolute;
+            margin: auto;
+            top: 280px;
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            right: 35%;
+        
+        }
+   
+  } 
+
+  @media only screen and (min-width: 960px) {
+nav {
+    justify-content: space-around;
+}
+
+nav li {
+    padding: 20px;
+}
+  }

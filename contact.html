@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelter of Paper</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+    
+
+    <header id="header">
+
+        <div onclick="burger()" class="burger" Id="burg">
+            <span id="sp1" class="s1"></span>
+            <span id="sp2" class="s2"></span>
+            <span id="sp3" class="s3"></span>
+        </div>
+        <div class="logo">
+
+            <a href="#header"><img src="./img/logo.png" alt=""></a>
+        </div>
+        <nav id="myNav">
+
+
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/music.html">Music</a></li>
+            <li><a href="/events.html">Concertos</a></li>
+            <li><a href="/news.html">Noticias</a></li>
+            <li><a href="/contact.html">Contactos</a></li>
+        </nav>
+        <div class="linha-div"></div>
+
+        <div class="socials">
+            <li><a target="_blank" href=""><i class="fab fa-facebook-f"></i></a></li>
+            <li><a target="_blank" href=""><i class="fab fa-twitter"></i></a></li>
+            <li><a target="_blank" href=""><i class="fab fa-spotify"></i></a></li>
+            <li><a target="_blank" href=""><i class="fab fa-youtube"></i></a></li>
+        </div>
+
+        <div class="container">
+            <h1>Email Shelter of Paper</h1>
+            <p>Email: </p>
+            <p id="email">email</p>
+            
+            <p>Telefone: </p>
+            <p id="telefone">telefone</p>
+        </div>
+ 
+        <script src="./js/styling.js"></script>
+        <script src="./js/objects/contact.js"></script>
+        <script src="./js/objects/event.js"></script>
+        <script src="./js/objects/video.js"></script>
+        <script src="./js/objects/new.js"></script>
+        <script src="./js/objects/contact.js"></script>
+        <script src="./js/objects/music.js"></script>
+        <script src="./js/classes/contactos.js"></script>
+        <script src="./js/classes/eventos.js"></script>
+        <script src="./js/classes/videos.js"></script>
+        <script src="./js/classes/news.js"></script>
+        <script src="./js/classes/musics.js"></script>
+        <script src="./js/gui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+        <script src="./js/music.js"></script>
+
+    <script>let event = new gui(); event.Init("/contact")</script>
+
+
+</body>
+
+</html>
